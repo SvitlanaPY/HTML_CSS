@@ -1,0 +1,74 @@
+<!-- https://html5book.ru/html-table/#colgroup-col -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My First Project</title>
+	</head>
+	<body>
+		<form name="USER" action="send.php" method="GET">
+			<fieldset>
+				<legend>Personal Information: </legend>
+				<label for="user name">Your Name: </label>
+				<input type="text" name="user_name" placeholder="your name" id="user name" required="true">
+				<br>
+				<br> 
+				<label for="user age">Your Age: </label>
+				<input type="number" name="user_age" id="user age" placeholder="your age">
+			</fieldset>				
+			<br>
+			<br>
+			<label for="pwd">Password: </label>
+			<input type="Password" name="password" placeholder="your password" id="pwd">
+			<br>
+			<br>
+			<!-- text Male/Female is not clickable -->
+			<input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="female" checked>Female
+			<br>
+			<br>
+			<!-- text C#/Java is clickable -->
+			<div> 
+  				<input type="radio" id="python" name="language" checked>
+  				<label for="python">C#</label>
+			</div>
+			<div>
+  				<input type="radio" id="java" name="language">
+  				<label for="java">Java</label>
+			</div>
+			<br>
+			<input type="checkbox" name="selections" value="A" checked>A
+			<input type="checkbox" name="selections" value="A">B
+			<input type="checkbox" name="selections" value="A">C
+			<br>
+			<br>
+			<label for="remember">Remember Me</label>
+			<input type="checkbox" name="remember_me" id="remember">
+			<br>
+			<br>
+			<select name="City">
+				<option value="lviv">Lviv</option>
+				<option value="kyiv" selected>Kyiv</option>
+				<option value="odesa">Odesa</option>
+			</select>
+			<br>
+			<br>
+			<label for="dropdown">Выберите язык программирования:</label>
+			<select id="dropdown" class="custom-select">
+				<option selected>--</option>
+				<option value="1">Python</option>
+				<option value="2">Java</option>
+				<option value="3">JavaScript</option>
+			</select>
+			<br>
+			<br>
+			<label for="msg">Message: </label>
+			<textarea name="message" id="msg"></textarea>
+			<br>
+			<br>
+			<input type="submit" name="Submit">
+		</form>
+	</body>
+</html>

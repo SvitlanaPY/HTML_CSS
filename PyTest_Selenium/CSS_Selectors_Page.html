@@ -1,0 +1,243 @@
+<body>
+	<h1>Welcome to My Homepage</h1>
+	<div class="intro">
+		<p>My name is Donald <span id="Lastname">Duck.</span></p>
+		<p id="my-Address">I live in Duckburg</p>
+		<p>I have many friends:</p>
+	</div>
+
+	<ul id="Listfriends">
+		<li>Goofy</li>
+		<li>Mickey</li>
+		<li>Daisy</li>
+		<li>Pluto</li>
+	</ul>
+
+	<p class="myquote">All my friends are great!
+	<br>But I really like Daisy!</p>
+	<p lang="it" title="Hello beautiful">Ciao bella</p>
+	<h3>We are all animals!</h3>
+	<p>
+		<b>My latest discoveries have led me to believe that we are all animals:</b>
+	</p>
+
+	<table cellpadding="2" cellspacing="2">
+		<thead>
+			<tr style="background-color: rgb(200, 200, 200);">
+				<th style="">Name</th>
+				<th style="">Type of Animal</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr style="background-color: rgb(221, 221, 221);">
+				<td style="">Mickey</td>
+				<td style="">Mouse</td>
+			</tr>
+			<tr style="background-color: rgb(221, 221, 221);">
+				<td style="">Goofey</td>
+				<td style="">Dog</td>
+			</tr>
+			<tr style="background-color: rgb(221, 221, 221);">
+				<td style="">Daisy</td>
+				<td style="">Duck</td>
+			</tr>
+			<tr style="background-color: rgb(221, 221, 221);">
+				<td style="">Pluto</td>
+				<td style="">Dog</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<div class="noSel newsletter" style="background-color:#99D6FF;border:1px solid #0099FF;padding:10px;">
+		<form>
+			<h4>Subscribe to my newsletter:</h4>
+		 	<div style="overflow:auto;">
+		  		<div style="width:100px;float:left;">Name:</div>
+		  		<div style="width:180px;float:left;">
+		  			<input type="text" style="width:150px" class="markup">
+		  		</div>
+		    </div>
+		 	<div style="overflow:auto;">
+		  		<div style="width:100px;float:left;">E-mail:</div>
+		  		<div style="width:180px;float:left;">
+		  			<input type="email" style="width:150px" class="markup" onchange="changeEmail(this)">
+		  		</div>
+    		</div>
+    		<div class="noSel" style="margin-top:10px;"> Female:
+   				<input name="rr" type="radio" id="rr1" checked="checked" style="outline:2px solid transparent"> Male: 
+   				<input name="rr" type="radio" id="rr2" style="outline:2px solid transparent"> Other: 
+   				<input name="rr" type="radio" id="rr3" disabled="disabled" style="outline:2px solid transparent">  
+  			</div>
+
+  			<h4>Newscategories:</h4>
+ 			<div style="overflow:auto;">
+  				<div style="width:60px;float:left;">Ducks:</div>
+  				<div style="width:20px;float:left;">
+  					<input id="cc1" type="checkbox" checked="checked" style="outline:2px solid transparent">
+  				</div>
+    		</div>
+
+ 			<div style="overflow:auto;">
+  				<div style="width:60px;float:left;">Dogs:</div>
+  				<div style="width:20px;float:left;">
+  					<input id="cc2" type="checkbox" style="outline:2px solid transparent">
+  				</div>
+    		</div>
+
+ 			<div style="overflow:auto;">
+  				<div style="width:60px;float:left;">Humans:</div>
+  				<div style="width:20px;float:left;">
+  					<input id="cc3" type="checkbox" style="outline:2px solid transparent">
+  				</div>
+    		</div>
+
+ 			<div class="noSel" style="clear:both;"></div>
+ 			<p class="noSel">Your lucky number (between 1 and 10): 
+ 				<input type="number" min="1" max="10" value="7" onchange="changeLuckyNumber(this)" style="border-color: rgb(255, 102, 102); background-color: rgb(255, 255, 153);">
+ 			</p>
+		</form>
+	</div>
+
+</body>
+
+
+/*
+.intro  
+--- Selects all elements with class="intro".
+
+#Lastname
+--- Selects the element with id="Lastname"
+
+.intro, #Lastname
+--- Selects all elements with class="intro", and the element with 
+id="Lastname"
+
+h1
+--- Selects all <h1> elements.
+
+h1, p
+--- Selects all <h1> elements and all <p> elements.
+
+div p
+--- Selects all <p> elements that are inside a <div> element.
+
+div > p
+--- Selects all <p> elements where the parent is a <div> element.
+
+ul + p
+--- Selects all <p> elements that are next to <ul> elements.
+
+ul ~ table
+--- Selects all <table> elements that are siblings of a <ul> element.
+
+*
+--- Selects all elements.
+
+p.myquote
+--- Selects all <p> elements with class="myquote".
+
+[id]
+--- Selects all elements with an id attribute.
+
+[id=my-Address]
+--- Selects all elements with an id attribute value equal to "my-Address"
+
+[id$=ess]
+--- Selects all elements with an id attribute value ending with "ess"
+
+[id|=my]
+--- Selects all elements with an id attribute value equal to "my" or starting with "my" followed by a hyphen (-).
+
+[id^=L]
+--- Selects all elements with an id attribute value starting with the letter "L"
+
+[title~=beautiful]
+--- Selects all elements with a title attribute value containing the word "beautiful"
+
+[id*=s]
+--- Selects all elements with an id attribute value containing the string "s"
+
+:checked
+--- Selects all checked form elements.
+
+:disabled
+--- Selects all disabled form elements.
+
+:enabled
+--- Selects all enabled form elements.
+
+:empty
+--- Selects all empty elements (like <input />)
+
+:focus
+--- Selects the element that currently has focus.
+
+p:first-child
+--- Selects all <p> elements that are the first child of their parent.
+
+p::first-letter
+--- Selects the first letter of all <p> elements.
+
+p::first-line
+--- Selects the first line of all <p> elements.
+
+p:first-of-type
+--- Selects all <p> elements that are the first <p> element of their parent.
+
+h1:hover
+--- Selects all <h1> elements, but only when you hover them.
+Try hover (mouse over) the H1 element in the result.
+
+input:in-range
+--- Selects all <input> elements with a max and/or min value, where the value is within the specific range.
+Try typing a number higher than 10, and you will see the styling disappear.
+
+input:out-of-range
+--- Selects all <input> elements with a max and/or min value, where the value is outside the specific range.
+Try typing in the "Your lucky number" field, and if you are out of range, the styling will appear.
+
+input:invalid
+--- Selects all <input> elements where the value is invalid according to their limitations.
+Try typing in the input fields, and if your input is invalid, the styling will appear.
+
+input:valid
+--- Selects all <input> elements where the value is valid according to their limitations.
+Try typing in the input fields, and if your input is invalid, the styling will disappear.
+
+p:lang(it)
+--- Selects all <p> elements with a lang attribute value starting with "it"
+
+p:last-child
+--- Selects all <p> elements that are the last child of their parent.
+
+p:last-of-type
+--- Selects all <p> elements that are the last <p> element of their parent.
+
+tr:nth-child(even)
+---Selects all even <tr> elements.
+
+tr:nth-child(odd)
+--- Selects all odd <tr> elements.
+
+li:nth-child(1)
+---Selects all <li> elements that are the first child of their parent.
+
+li:nth-last-child(1)
+--- Selects all <li> elements that are the first child of their parent, counting from the last child.
+
+li:nth-of-type(2)
+--- Selects all <li> elements that are the second <li> element of their parent.
+
+li:nth-last-of-type(2)
+--- Selects all <li> elements that are the second <li> element of their parent, counting from the <li> element.
+
+b:only-child
+---Selects all <b> elements that are the only child of their parent.
+
+h3:only-of-type
+--- Selects all <h3> elements that are the only child of its type, of their parent.
+
+:root
+--- Selects the document’s root element.
+
+*/

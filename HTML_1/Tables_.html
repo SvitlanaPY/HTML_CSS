@@ -1,0 +1,80 @@
+<!-- https://html5book.ru/html-table/#colgroup-col -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My First Project</title>
+		<style type="text/css">
+		caption {
+  			font-family: annabelle, cursive;
+		    font-weight: bold;
+		    font-size: 2em;
+		    padding: 10px; 
+		    color: #F3CD26;
+		    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+		}
+/*		<!-- Промежутки между ячейками таблицы убираются слежуюющим образом: -->
+		table {
+			border-collapse: collapse;
+		} 
+*/
+		th, td {
+    		font-size: 1em;
+  			padding: 5px 15px;
+  			border: 1px solid #A9E2CC;
+		}
+		</style>
+	</head>
+
+	<body>
+		<table width="500">
+		
+		<colgroup>
+    		<col span="3" style="background:Khaki">   <!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы -->
+    		<col span="1" style="background-color:LightCyan">  <!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+  		</colgroup>
+
+		<caption>My First Table</caption>
+			<thead>
+				<tr>
+					<th>Item1</th>
+					<th>Item2</th>
+					<th colspan="2">Item3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="3" style="text-align:right">Item11</td>
+					<td>Item12</td>
+					<td>Item13</td>
+					<td>Item14</td>
+				</tr>
+				<tr>
+					<td>Item14</td>
+					<td>Item15</td>
+					<td>Item16</td>
+				</tr>
+				<tr>
+					<td>Item17</td>
+					<td>Item18</td>
+					<td>Item19</td>
+				</tr>								
+				<tr>
+					<td>Item21</td>
+					<td colspan = "2">Item22</td>
+					<td>Item23</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>Item31</td>
+					<td>Item32</td>
+					<td>Item33</td>
+					<td>Item34</td>
+				</tr>
+			</tfoot>		
+		</table>
+	</body>
+</html>
