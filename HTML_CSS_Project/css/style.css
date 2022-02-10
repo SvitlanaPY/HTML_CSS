@@ -74,6 +74,7 @@ p {
 }
 
 /* hover - псевдоклас */
+/* space between li and a - means that wee access to <a> inside <li> */
 .page-navigation li a:hover {
 	color: yellowgreen;
 	background-color: black;

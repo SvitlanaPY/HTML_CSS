@@ -1,3 +1,14 @@
+<!-- 
+Справочник CSS: 
+			http://htmlbook.ru/css 
+Псевдоклассы: 
+			https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-classes 
+			https://basicweb.ru/css/css_selectors.php 
+Псевдоэлементы:
+			https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-elements
+			https://basicweb.ru/css/css_selectors.php
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,7 +17,8 @@
 		<title>My First Project</title>
 		<style type="text/css">
 			#i_am_id_selector {
-				color: red
+				color: red; 
+				font-size: 40px;
 			} 
 
 			.i_am_class_selector {
@@ -25,10 +37,19 @@
 				background-color: yellow;
 			}
 
+			/* Псевдоклассы: 
+			https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-classes 
+			https://basicweb.ru/css/css_selectors.php 
+			*/
 			p:first-child {
 				font-weight: bold;
 			}
 
+			/*
+			Псевдоэлементы:
+			https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-elements
+			https://basicweb.ru/css/css_selectors.php
+			*/
 			p::first-letter {
 				color: blue;
 			}
