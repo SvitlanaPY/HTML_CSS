@@ -1,0 +1,41 @@
+<!-- div має position = relative, а картинки все ще мають position = static -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My First Project</title>
+		<style type="text/css">
+			div {
+				border: 2px solid red;
+			}
+
+			/* задаємо position для div-елемента через селектор class */
+			.relative {
+				position: relative;
+			}
+
+			/* ще один спосіб задати position елементу div
+			div {
+				position: relative;
+			}
+			*/
+			
+			img {
+				border: 1px dotted lightgray;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- div має position = relative, а картинки все ще мають position = static -->
+		<div class="relative">
+			<img src="Images/A-Cat.jpg" width="200px">
+			<img src="Images/A-Cat.jpg" width="200px">
+			<img src="Images/A-Cat.jpg" width="200px">
+		</div>
+
+	</body>
+</html>

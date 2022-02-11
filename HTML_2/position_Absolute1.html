@@ -1,5 +1,3 @@
-<!-- div має position = relative, а картинки все ще мають position = static -->
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,27 +9,21 @@
 				border: 2px solid red;
 			}
 
-			/* задаємо position для div-елемента через селектор class */
-			.relative {
-				position: relative;
-			}
-
-			/* ще один спосіб задати position елементу div
-			div {
-				position: relative;
-			}
-			*/
-			
 			img {
 				border: 1px dotted lightgray;
 			}
 
-		</style>
-	</head>
+			/* задаємо position для всіх img-елементів через img-тег */ 
+			img {
+				position: absolute;
+			}
 
+		</style>
+
+	</head>
 	<body>
-		<!-- div має position = relative, а картинки все ще мають position = static -->
-		<div class="relative">
+		<!-- картинкам задаємо position = absolute; тепер всі картинки вирвались із загального потоку і тепер позиціонуються відносно до батьківського елемента, тобто всі вони збилися у верхній лівій край батьківського елемента, а батьківський елемент ігнорує всі дочірні елементи, тобто в нього тепер висота має 0px. І щоб розмістити всі три картинки каскадом, потрібно додати картинкам відступи -->
+		<div>
 			<img src="Images/A-Cat.jpg" width="200px">
 			<img src="Images/A-Cat.jpg" width="200px">
 			<img src="Images/A-Cat.jpg" width="200px">
