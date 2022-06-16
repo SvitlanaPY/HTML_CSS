@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Вивчаємо HTML: таблиці</title>
+        <style type="text/css">
+      caption {
+          font-family: annabelle, cursive;
+          font-weight: bold;
+          font-size: 2em;
+          padding: 10px; 
+          color: #F3CD26;
+          text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+      }
+    /*  <!-- Промежутки между ячейками таблицы убираются слежуюющим образом: -->
+      table {
+        border-collapse: collapse;
+      } 
+    */
+      th, td {
+          font-size: 1em;
+          padding: 5px 15px;
+          border: 1px solid #A9E2CC;
+      }
+    </style>
+  </head>
+  <body> 
+      <table>
+    <caption>Заголовок таблиці</caption>
+      <thead>
+        <tr>
+          <th>Заголовок</th>
+          <th>Заголовок</th>
+          <th>Заголовок</th>
+          <th>Заголовок</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Текст1</td>
+          <td>Текст1</td>
+          <td>Текст1</td>
+          <td>Текст1</td>
+        </tr>
+        <tr>
+          <td>Текст</td>
+          <td>Текст</td>
+          <td rowspan="3" style="text-align:left">Текст</td>
+          <td>Текст</td>
+        </tr>
+        <tr>
+          <td>Текст</td>
+          <td>Текст</td>
+          <td>Текст</td>
+        </tr>
+        <tr>
+          <td>Текст</td>
+          <td>Текст</td>
+          <td>Текст</td>
+        </tr>
+        <tr>
+          <td>Текст</td>
+          <td>Текст</td>
+          <td>Текст</td>
+          <td>Текст</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Текст in foot</td>
+          <td>Текст in foot</td>
+          <td>Текст in foot</td>
+          <td>Текст in foot</td>
+        </tr>
+      </tfoot>    
+    </table>
+  </body>
+</html>
+
